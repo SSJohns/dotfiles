@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'Buffergator'
 Plugin 'ervandew/ag'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'powerline/powerline'
 filetype plugin indent on
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
