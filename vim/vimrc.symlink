@@ -6,13 +6,13 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 " }}}
 " Plugins {{{
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " We could also add repositories with a ".git" extension
 Plugin 'scrooloose/nerdtree.git'
@@ -20,9 +20,14 @@ Plugin 'scrooloose/nerdtree.git'
 " To get plugins from Vim Scripts, you can reference the plugin
 " by name as it appears on the site
 Plugin 'Buffergator'
+Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/ag'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'sjl/badwolf'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'powerline/powerline'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
 filetype plugin indent on
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +44,8 @@ set backspace=indent,eol,start
 set tabstop=4           " 4 space tab
 set expandtab           " use spaces for tabs
 set softtabstop=4       " 4 space tab
+set list
+set listchars=tab:>-
 set shiftwidth=4
 set modelines=1
 filetype indent on
@@ -54,6 +61,7 @@ set wildmenu
 set lazyredraw
 set showmatch           " higlight matching parenthesis
 set fillchars+=vert:┃
+set pastetoggle=<F2>
 " }}}
 " Searching {{{
 set ignorecase          " ignore case when searching
@@ -106,6 +114,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_ignore_files = ['.java$']
 let g:syntastic_python_python_exec = 'python3'
+let g:rustfmt_autosave = 1
 " }}}
 " AutoGroups {{{
 augroup configgroup

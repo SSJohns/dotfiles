@@ -16,6 +16,8 @@
       beautify_on_save: true
     ruby:
       default_beautifier: "Ruby Beautify"
+  "atom-package-deps":
+    ignored: []
   "autocomplete-modules":
     babelPluginModuleResolver: true
     webpack: true
@@ -40,7 +42,7 @@
     telemetryConsent: "no"
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
@@ -48,6 +50,8 @@
     panelDisplayMode: "closed"
   "linter-eslint":
     useGlobalEslint: true
+  "linter-ui-default":
+    panelHeight: 69
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true

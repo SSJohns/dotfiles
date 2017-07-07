@@ -137,8 +137,21 @@ install_dotfiles () {
   done
 }
 
+install_vimfiles () {
+  info 'installig vimfiles'
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 4 -name '*.vim')
+  do
+      dst="$HOME/.vim/ftplugin/$(baseaeme "$src")"
+      link_file "$src" "$dst"
+  done
+} 
+
 setup_gitconfig
 install_dotfiles
+install_vimfiles
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
